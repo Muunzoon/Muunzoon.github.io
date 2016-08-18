@@ -1,16 +1,14 @@
-var escena = new THREE.Scene();<!crea escena>
+var escena = new THREE.Scene();
 
-var camara = new THREE.PerspectiveCamera();<!objeto para mover camara>
+var camara = new THREE.PerspectiveCamera();
 
-camara.position.z = 5; <!pone la camara en la escena>
+camara.position.z = 5; 
 
 var renderizador = new THREE.WebGLRenderer();
 
-renderizador.setSize( window.innerHeight*.95,window.innerHeight*.95);<!es como para perspectiva window te da las dimensiones de la pantalla>
+renderizador.setSize( window.innerHeight*.95,window.innerHeight*.95);
 
-document.body.appendChild( renderizador.domElement );<!mete el renderizador en el body del documento>
-
-<!No hay nada en la escena aun se hace una malla para describir el objeto y material>
+document.body.appendChild( renderizador.domElement );
 
 var forma = new THREE.BoxGeometry( 1,1,1);
 
@@ -22,7 +20,6 @@ cubo.rotateX(-Math.PI/4);
 
 cubo.rotateY(Math.PI/4);
 
-<!generar imagen>
 escena.add( cubo );
 
 renderizador.render( escena, camara );
