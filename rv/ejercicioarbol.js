@@ -7,7 +7,7 @@ document.body.appendChild( renderizador.domElement );
 var forma1 = new THREE.CylinderGeometry( 5, 5, 20, 32 );
 var forma2 = new THREE.SphereGeometry( 7, 32, 32 );
 var material1 = new THREE.MeshNormalMaterial();
-var material2 = new THREE.MeshBasicMaterial(0x894530);
+var material2 = new THREE.MeshBasicMaterial(0xff0000);
 var cilindro = new THREE.Mesh( forma1, material1 );
 var esfera = new THREE.Mesh(forma2, material2 );
 esfera.translateY(6);
