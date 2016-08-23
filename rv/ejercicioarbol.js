@@ -10,5 +10,5 @@ var material = new THREE.MeshNormalMaterial();
 var cilindro = new THREE.Mesh( forma1, material );
 var esfera = new THREE.Mesh(forma2, material );
 
-escena.add( esfera );
+escena.add( esfera, cilindro );
 renderizador.render( escena, camara );
