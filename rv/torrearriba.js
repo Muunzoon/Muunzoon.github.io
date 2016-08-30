@@ -1,4 +1,4 @@
-var troncoForma = new THREE.CylinderGeometry(5, 5, 10);
+var troncoForma = new THREE.CylinderGeometry(2.5, 5, 10);
 var esferaForma = new THREE.SphereGeometry(6.5);
 esferaForma.translate(0,10,0);
 
@@ -17,7 +17,7 @@ var escena = new THREE.Scene();
 escena.add( arbolMalla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 50;
+camara.position.z = 100;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
