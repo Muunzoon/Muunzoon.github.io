@@ -1,30 +1,23 @@
-var figura = new THREE.Shape();
+var troncoForma = new THREE.CylinderGeometry(.25, .5, 1);
+var esferaForma = new THREE.SphereGeometry(.65);
+esferaForma.translate(0,1,0);
 
-figura.moveTo(10, 10);
-figura.lineTo(10, 40);
-figura.lineTo(40, 40);
-figura.lineTo(10, 10);
+var troncoMalla = new THREE.Mesh(troncoForma);
+var esferaMalla = new THREE.Mesh(esferaForma);
 
-figura.moveTo(-10, -10);
-figura.lineTo(10, -40);
-figura.lineTo(-40, -40);
-figura.lineTo(-10, -10);
+var arbolForma = new THREE.Geometry();
 
-figura.moveTo(100, 100);
-figura.lineTo(100, 140);
-figura.lineTo(140, 140);
-figura.lineTo(100, 100);
-
-var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
+arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
+arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
-var malla = new THREE.Mesh( forma, material );
+var arbolMalla = new THREE.Mesh(arbolForma, material);
 
 var escena = new THREE.Scene();
-escena.add( malla );
+escena.add( arbolMalla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 500;
+camara.position.z = 5;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
