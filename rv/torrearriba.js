@@ -9,6 +9,12 @@ figura.moveTo(-10, -10);
 figura.lineTo(10, -40);
 figura.lineTo(-40, -40);
 figura.lineTo(-10, -10);
+
+figura.moveTo(100, 100);
+figura.lineTo(100, 140);
+figura.lineTo(140, 140);
+figura.lineTo(100, 100);
+
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
 
 var material = new THREE.MeshNormalMaterial();
