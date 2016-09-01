@@ -2,7 +2,7 @@ var troncoForma = new THREE.CylinderGeometry(2.5, 5, 10);
 var basee = new THREE.CylinderGeometry(6,6,2);
 basee.translate(0,-2,0);
 var basee2 = new THREE.CylinderGeometry(8,8,2);
-basee.translate(0,-4,0);
+basee.translate(0,-10,0);
 var esferaForma = new THREE.SphereGeometry(6.5);
 esferaForma.translate(0,10,0);
 
