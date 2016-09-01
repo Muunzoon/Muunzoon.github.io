@@ -1,10 +1,10 @@
-var troncoForma = new THREE.CylinderGeometry(2.5, 5, 10);
-var basee = new THREE.CylinderGeometry(6,6,2);
-basee.translate(0,-5,0);
-var esferaForma = new THREE.SphereGeometry(6.5);
-esferaForma.translate(0,10,0);
-var baseabajo = new THREE.CylinderGeometry(8,8,2);
-baseabajo.translate(0,-6,0);
+var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
+var basee = new THREE.CylinderGeometry(24,24,8);
+basee.translate(0,-20,0);
+var esferaForma = new THREE.SphereGeometry(26);
+esferaForma.translate(0,40,0);
+var baseabajo = new THREE.CylinderGeometry(32,32,8);
+baseabajo.translate(0,-24,0);
 
 var figura = new THREE.Shape();
 var figura1 = new THREE.Shape();
