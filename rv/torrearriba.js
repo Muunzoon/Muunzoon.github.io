@@ -4,7 +4,7 @@ basee.translate(0,-5,0);
 var esferaForma = new THREE.SphereGeometry(6.5);
 esferaForma.translate(0,10,0);
 var baseabajo = new THREE.CylinderGeometry(8,8,2);
-baseabajo.translate(0,-12,0);
+baseabajo.translate(0,-8,0);
 
 var baseeMalla = new THREE.Mesh(basee);
 var baseAbajomalla = new THREE.Mesh(baseabajo);
