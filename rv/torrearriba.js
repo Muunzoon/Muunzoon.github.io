@@ -38,6 +38,10 @@ forma1.rotateX( Math.PI/2 );
 forma2.rotateX( Math.PI/2 );
 forma3.rotateX( Math.PI/2 );
 forma4.rotateX( Math.PI/2 );
+forma1.translate(0,60,0);
+forma2.translate(0,60,0);
+forma3.translate(0,60,0);
+forma4.translate(0,60,0);
 
 
 var malla = new THREE.Mesh(forma1);
@@ -69,7 +73,7 @@ var escena = new THREE.Scene();
 escena.add( arbolMalla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 500;
+camara.position.z = 600;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
