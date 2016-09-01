@@ -75,7 +75,7 @@ var escena = new THREE.Scene();
 escena.add( arbolMalla );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 600;
+camara.position.z = 300;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
