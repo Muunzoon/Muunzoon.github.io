@@ -1,7 +1,7 @@
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
-var esferaForma = new THREE.BoxGeometry( 26, 26, 26);
+var esferaForma = new THREE.BoxGeometry( 30, 30, 30);
 esferaForma.translate(0,40,0);
 var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
@@ -38,10 +38,10 @@ forma1.rotateX( Math.PI/2 );
 forma2.rotateX( Math.PI/2 );
 forma3.rotateX( Math.PI/2 );
 forma4.rotateX( Math.PI/2 );
-forma1.translate(-10,60,0);
-forma2.translate(-10,60,0);
-forma3.translate(-10,60,0);
-forma4.translate(-10,60,0);
+forma1.translate(-12,60,0);
+forma2.translate(-12,60,0);
+forma3.translate(-12,60,0);
+forma4.translate(-12,60,0);
 
 
 var malla = new THREE.Mesh(forma1);
