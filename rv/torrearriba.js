@@ -1,7 +1,7 @@
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
-var esferaForma = new THREE.BoxGeometry( 30, 30, 30);
+var esferaForma = new THREE.BoxGeometry( 35, 35, 35);
 esferaForma.translate(0,40,0);
 var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
@@ -38,10 +38,10 @@ forma1.rotateX( Math.PI/2 );
 forma2.rotateX( Math.PI/2 );
 forma3.rotateX( Math.PI/2 );
 forma4.rotateX( Math.PI/2 );
-forma1.translate(-12,60,0);
-forma2.translate(-12,60,0);
-forma3.translate(-12,60,0);
-forma4.translate(-12,60,0);
+forma1.translate(-12,60,-12);
+forma2.translate(-12,60,-12);
+forma3.translate(-12,60,-12);
+forma4.translate(-12,60,-12);
 
 
 var malla = new THREE.Mesh(forma1);
@@ -68,6 +68,8 @@ arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var arbolMalla = new THREE.Mesh(arbolForma, material);
+
+arbolMalla.rotateX( Math.PI/4 );
 
 var escena = new THREE.Scene();
 escena.add( arbolMalla );
