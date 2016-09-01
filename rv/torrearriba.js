@@ -38,10 +38,10 @@ forma1.rotateX( Math.PI/2 );
 forma2.rotateX( Math.PI/2 );
 forma3.rotateX( Math.PI/2 );
 forma4.rotateX( Math.PI/2 );
-forma1.translate(0,60,0);
-forma2.translate(0,60,0);
-forma3.translate(0,60,0);
-forma4.translate(0,60,0);
+forma1.translate(-10,60,0);
+forma2.translate(-10,60,0);
+forma3.translate(-10,60,0);
+forma4.translate(-10,60,0);
 
 
 var malla = new THREE.Mesh(forma1);
