@@ -14,7 +14,6 @@ var esferaMalla = new THREE.Mesh(esferaForma);
 var arbolForma = new THREE.Geometry();
 
 arbolForma.merge(baseeMalla.geometry, baseeMalla.matrix);
-
 arbolForma.merge(basee2Malla.geometry, basee2Malla.matrix);
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
