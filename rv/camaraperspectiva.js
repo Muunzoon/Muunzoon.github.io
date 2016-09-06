@@ -18,6 +18,8 @@ esfera2.position.z = -10;
 var escena = new THREE.Scene();
 ascena.add( esfera2 );
 escena.add( cubo );
+
 var renderizador = new THREE.WebGLRenderer();
-renderizador.setSize( window.innerHeight*.95,window.innerHeight*.95);
+renderizador.setSize( window.innerHeight,window.innerHeight);
 document.body.appendChild( renderizador.domElement );
+renderizador.render( escena, camara );
