@@ -63,7 +63,7 @@ arbolForma.merge(baseeMalla.geometry, baseeMalla.matrix);
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 /////////////////////////////tablero
-var tablero = new array(); 
+var tablero[]; 
 for ( var XX = 0; XX < 8; XX ++ ){
 for ( var ZZ = 0; ZZ < 8; ZZ ++ ){
 	tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 1, 10), material1 );
