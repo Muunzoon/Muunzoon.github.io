@@ -69,11 +69,16 @@ arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var arbolMalla = new THREE.Mesh(arbolForma, material1);
 var Torre2 = new THREE.Mesh(arbolForma, material2);
-arbolMalla.rotateX( Math.PI/4 );
+var Torre3 = new THREE.Mesh(arbolForma, material1);
+var Torre4 = new THREE.Mesh(arbolForma, material2);
+//arbolMalla.rotateX( Math.PI/4 );
 Torre2.translateX(30);
+Torre3.translateY(-30);
+Torre4.translateX(30);
+Torre4.translateY(-30);
 
 var escena = new THREE.Scene();
-escena.add( arbolMalla , Torre2 );
+escena.add( arbolMalla , Torre2 , Torre3 , Torre4 );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
