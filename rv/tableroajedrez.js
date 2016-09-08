@@ -96,8 +96,7 @@ for ( var l=0; l<32; l ++)
 escena.add(  tablero [l] );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 30;
-camara.position.z = 30;
+camara.position.z = 300;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
