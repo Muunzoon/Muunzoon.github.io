@@ -67,7 +67,7 @@ var tablero = new Array();
 for ( var XX = 0; XX < 8; XX ++ ){
 for ( var ZZ = 0; ZZ < 8; ZZ ++ ){
 	if((XX*8+ZZ)%2==0){
-	tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 1, 10), material1 );
+	tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 10, 10), material1 );
 	tablero[(XX*8)+ZZ].translateX(XX*10);
 	tablero[(XX*8)+ZZ].translateZ = ZZ * 10;
 	}
