@@ -85,7 +85,8 @@ Torre4.translateY(-30);
 
 var escena = new THREE.Scene();
 //arbolMalla , Torre2 , Torre3 , Torre4 ,
-escena.add(  tablero [1] );
+for ( var l=0; l<32; l ++)
+escena.add(  tablero [l] );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
