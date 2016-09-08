@@ -58,23 +58,22 @@ var troncoMalla = new THREE.Mesh(troncoForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
 
 var arbolForma = new THREE.Geometry();
-
 arbolForma.merge(malla.geometry, malla.matrix);
 arbolForma.merge(malla1.geometry, malla1.matrix);
 arbolForma.merge(malla2.geometry, malla2.matrix);
 arbolForma.merge(malla3.geometry, malla3.matrix);
-
 arbolForma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 arbolForma.merge(baseeMalla.geometry, baseeMalla.matrix);
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var arbolMalla = new THREE.Mesh(arbolForma, material1);
-
+var Torre2 = new THREE.Mesh(arbolForma, material2);
 arbolMalla.rotateX( Math.PI/4 );
+esfera.translateX(30);
 
 var escena = new THREE.Scene();
-escena.add( arbolMalla );
+escena.add( arbolMalla , Torre2 );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
