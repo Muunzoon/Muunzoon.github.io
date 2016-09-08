@@ -1,4 +1,4 @@
-var material1 = new THREE.MeshBasicMaterial( { color: 0xe1ecf2 } );
+var material1 = new THREE.MeshBasicMaterial( { color: 0xbbbbbb } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x373737 } );
 
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
