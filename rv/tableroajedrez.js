@@ -71,7 +71,7 @@ var Torre3 = new THREE.Mesh(arbolForma, material1);
 var Torre4 = new THREE.Mesh(arbolForma, material2);
 var cubo = new THREE.Mesh( cacho , material1 );
 cubo.rotateX( Math.PI/4 );
-cubo.translateX(50);
+cubo.translateX(70);
 Torre2.translateX(30);
 Torre3.translateY(-30);
 Torre4.translateX(30);
