@@ -70,7 +70,7 @@ arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 var arbolMalla = new THREE.Mesh(arbolForma, material1);
 var Torre2 = new THREE.Mesh(arbolForma, material2);
 arbolMalla.rotateX( Math.PI/4 );
-esfera.translateX(30);
+Torre2.translateX(30);
 
 var escena = new THREE.Scene();
 escena.add( arbolMalla , Torre2 );
