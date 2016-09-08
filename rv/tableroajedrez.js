@@ -1,3 +1,6 @@
+var material1 = new THREE.MeshBasicMaterial( { color: 0xe1ecf2 } );
+var material2 = new THREE.MeshBasicMaterial( { color: 0x373737 } );
+
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
@@ -66,8 +69,7 @@ arbolForma.merge(baseeMalla.geometry, baseeMalla.matrix);
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
-var material = new THREE.MeshNormalMaterial();
-var arbolMalla = new THREE.Mesh(arbolForma, material);
+var arbolMalla = new THREE.Mesh(arbolForma, material1);
 
 arbolMalla.rotateX( Math.PI/4 );
 
