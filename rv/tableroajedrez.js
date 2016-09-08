@@ -66,9 +66,16 @@ arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 var tablero = new Array(); 
 for ( var XX = 0; XX < 8; XX ++ ){
 for ( var ZZ = 0; ZZ < 8; ZZ ++ ){
+	if((XX*8+ZZ)%2==0){
 	tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 1, 10), material1 );
 	tablero[(XX*8)+ZZ].translateX(XX*10);
 	tablero[(XX*8)+ZZ].translateZ = ZZ * 10;
+	}
+	else{
+		tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 1, 10), material1 );
+		tablero[(XX*8)+ZZ].translateX(XX*10);
+		tablero[(XX*8)+ZZ].translateZ = ZZ * 10;
+	}
 }}
 //tablero
 var arbolMalla = new THREE.Mesh(arbolForma, material1);
@@ -89,7 +96,8 @@ for ( var l=0; l<32; l ++)
 escena.add(  tablero [l] );
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 300;
+camara.position.z = 30;
+camara.position.z = 30;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
