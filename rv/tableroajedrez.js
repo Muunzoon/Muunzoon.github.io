@@ -94,6 +94,7 @@ var escena = new THREE.Scene();
 //arbolMalla , Torre2 , Torre3 , Torre4 ,
 for ( var l=0; l<32; l ++)
 escena.add(  tablero [l] );
+escena.rotateX( Math.PI/4 );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
