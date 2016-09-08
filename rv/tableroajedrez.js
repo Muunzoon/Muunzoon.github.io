@@ -1,8 +1,6 @@
 var material1 = new THREE.MeshBasicMaterial( { color: 0xbbbbbb } );
 var material2 = new THREE.MeshBasicMaterial( { color: 0x373737 } );
 
-var cacho = new THREE.BoxGeometry( 10,1,10);
-
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
@@ -64,21 +62,30 @@ arbolForma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 arbolForma.merge(baseeMalla.geometry, baseeMalla.matrix);
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
-
+/////////////////////////////tablero
+var tablero = new array(); 
+for ( var XX = 0; XX < 8; XX ++ ){
+for ( var ZZ = 0; ZZ < 8; ZZ ++ ){
+	tablero[(XX*8)+ZZ]= new THREE.Mesh( new THREE.BoxGeometry( 10, 1, 10), material1 );
+	tablero[(XX*8)+ZZ].translateX(XX*10);
+	tablero[(XX*8)+ZZ].translateZ = ZZ * 10;
+}}
+//tablero
 var arbolMalla = new THREE.Mesh(arbolForma, material1);
 var Torre2 = new THREE.Mesh(arbolForma, material2);
 var Torre3 = new THREE.Mesh(arbolForma, material1);
 var Torre4 = new THREE.Mesh(arbolForma, material2);
-var cubo = new THREE.Mesh( cacho , material1 );
-cubo.rotateX( Math.PI/4 );
-cubo.translateX(70);
+//var cubo = new THREE.Mesh( cacho , material1 );
+//cubo.rotateX( Math.PI/4 );
+//cubo.translateX(70);
 Torre2.translateX(30);
 Torre3.translateY(-30);
 Torre4.translateX(30);
 Torre4.translateY(-30);
 
 var escena = new THREE.Scene();
-escena.add( arbolMalla , Torre2 , Torre3 , Torre4 , cubo );
+//arbolMalla , Torre2 , Torre3 , Torre4 ,
+escena.add(  tablero );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
