@@ -18,7 +18,12 @@ camara.position.z = 15;
 camara.position.y = 5;
 
 var renderizador = new THREE.WebGLRenderer();
-
+//////////////////para hacer sombras
+renderizador.shadowMapEnabled = true;
+malla.castShadow = true;
+base.receiveShadow = true;
+iluminacion.castShadow = true;
+///////////////////////////////////////
 renderizador.setSize( 600, 600 );
 document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
