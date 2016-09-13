@@ -92,7 +92,7 @@ Torre4.translateY(-30);
 
 var escena = new THREE.Scene();
 //arbolMalla , Torre2 , Torre3 , Torre4 ,
-for ( var l=0; l<32; l ++)
+for ( var l=0; l<64; l ++)
 escena.add(  tablero [l] );
 escena.rotateX( Math.PI/2 );
 
