@@ -4,7 +4,7 @@ var material2 = new THREE.MeshBasicMaterial( { color: 0x373737 } );
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
-var esferaForma = new THREE.BoxGeometry( 35, 35, 35);
+var esferaForma = new THREE.BoxGeometry( 35, 1, 35);
 esferaForma.translate(0,40,0);
 var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
