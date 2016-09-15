@@ -95,7 +95,7 @@ var escena = new THREE.Scene();
 for ( var l=0; l<64; l ++)
 escena.add(  tablero [l] );
 var mesa = new THREE.BoxGeometry( 30,30,30);
-var cubo = new THREE.Mesh( forma, material );
+var cubo = new THREE.Mesh( mesa, material1 );
 escena.add( cubo );
 
 escena.rotateX( Math.PI/2 );
