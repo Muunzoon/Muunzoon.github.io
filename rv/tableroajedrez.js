@@ -94,6 +94,10 @@ var escena = new THREE.Scene();
 //arbolMalla , Torre2 , Torre3 , Torre4 ,
 for ( var l=0; l<64; l ++)
 escena.add(  tablero [l] );
+var mesa = new THREE.BoxGeometry( 30,30,30);
+var cubo = new THREE.Mesh( forma, material );
+escena.add( cubo );
+
 escena.rotateX( Math.PI/2 );
 
 var camara = new THREE.PerspectiveCamera();
