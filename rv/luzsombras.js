@@ -2,12 +2,10 @@ var iluminacion = new THREE.PointLight( 0xffffff );
 iluminacion.position.y = 20;
 
 var forma = new THREE.SphereGeometry( 1 );
-var material = new THREE.MeshLambertMaterial( {color: 0x00ff00 } );
+var material = new THREE.MeshLambertMaterial( {color: 0x00ff00, transparent: true, opacity: 0.5 } );
 var malla = new THREE.Mesh( forma, material );
 malla.position.y = 2;
 ///////////////
-malla.transparent =  true;
-malla.opacity = 0.1;
 /////////////
 var base = new THREE.Mesh( new THREE.BoxGeometry(5,.1,5), new THREE.MeshLambertMaterial({color: 0xFFFFFF}));
 
