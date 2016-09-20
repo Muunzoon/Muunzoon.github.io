@@ -7,7 +7,7 @@ var malla = new THREE.Mesh( forma, material );
 malla.position.y = 2;
 ///////////////
 malla.transparent =  true;
-malla.opacity = .5;
+malla.opacity = .1;
 /////////////
 var base = new THREE.Mesh( new THREE.BoxGeometry(5,.1,5), new THREE.MeshLambertMaterial({color: 0xFFFFFF}));
 
