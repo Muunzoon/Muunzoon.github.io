@@ -14,7 +14,7 @@ var loop = function(){
   requestAnimationFrame(loop);
   renderizador.render(escena, camara);
   malla.rotateY(0.01);
-  if (Math.abs(malla.position)>=5)
+  if (Math.abs(malla.position)>=1)
   step = -step;
   malla.position.x+= step;
   
