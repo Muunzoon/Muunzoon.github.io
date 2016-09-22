@@ -14,9 +14,9 @@ camara.position.y = 5;
 }
 
 var main = function(P){
+  P(1);
   renderizador.render(escena, camara);
   
   }
   var escena, camara, renderizador;
-  init(1);
-  main(2);
+  main(init);
