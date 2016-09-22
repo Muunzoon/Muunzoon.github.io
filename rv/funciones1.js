@@ -16,7 +16,7 @@ var loop = function(){
   malla.rotateY(0.01);
   if (Math.abs(malla.position)>=5)
   step = -step;
-  malla.position.x+ = step;
+  malla.position.x+= step;
   
   
   }
