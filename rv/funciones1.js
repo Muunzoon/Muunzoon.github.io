@@ -1,5 +1,5 @@
 function init(P){
-  var malla = new THREE.Mesh(new THREE.BoxGeometry(P, P, P), new THREE.MeshNormalMaterial());
+  malla = new THREE.Mesh(new THREE.BoxGeometry(P, P, P), new THREE.MeshNormalMaterial());
   escena = new THREE.Scene();
   escena.add(malla);
   camara = new THREE.PerspectiveCamera();
@@ -13,10 +13,12 @@ camara.position.y = 5;
   
 }
 
-var main = function(P){
-  P(1);
+var loop = function(){
+  requestAnimationFrame(loop);
   renderizador.render(escena, camara);
+  malla.rotateY(0.01);
   
   }
-  var escena, camara, renderizador;
-  main(init);
+  var escena, camara, renderizador, malla;
+  init(1);
+  loop();
