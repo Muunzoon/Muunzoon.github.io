@@ -27,5 +27,5 @@ VENTANA.loop = function (){
   VENTANA.malla.rotateY( .01 );
   VENTANA.renderizador.render( VENTANA.escena. VENTANA.camara);
 }
-VENTAANA.setup();
+VENTANA.setup();
 VENTANA.loop();
