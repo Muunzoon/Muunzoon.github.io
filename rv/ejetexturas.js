@@ -14,7 +14,7 @@ TEXTURA.setup = function() {
   TEXTURA.camara.position.z = 5;
   
   var lienzo = document.getElementById("ejemplotextura");
-  TEXTURA.renderizador = new THREE.WebGLRenderer({canvas: lienzo, antialias: true});
+  TEXTURA.renderizador = new THREE.WebGLRenderer();
   TEXTURA.renderizador.setSize( 600, 600 );
 }
 
