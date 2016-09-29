@@ -15,7 +15,7 @@ TEXTURA.setup = function() {
   
   TEXTURA.renderizador = new THREE.WebGLRenderer({antialias: true});
   TEXTURA.renderizador.setSize( 600, 600 );
-  domcument.body.appendChild(TEXTURA.renderizador.domElement);
+  document.body.appendChild(TEXTURA.renderizador.domElement);
 }
 
 TEXTURA.loop = function (){
