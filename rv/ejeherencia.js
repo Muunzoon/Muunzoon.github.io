@@ -26,9 +26,9 @@ PROTOTIPO.setup = function() {
   PROTOTIPO.camara = new THREE.PerspectiveCamera();
   PROTOTIPO.camara.position.z = 20;
   
-  var lienzo = document.getElementById("ejemplo-prototipo");
-  PROTOTIPO.renderizador = THREE.WebGLRenderer({antialias: true});
+  PROTOTIPO.renderizador = THREE.WebGLRenderer();
   PROTOTIPO.renderizador.setSize( 600, 600 );
+  document.body.appendChild(PROTOTIPO.renderizador.domElement);
 
   PROTOTIPO.escena = new THREE.Scene();
   PROTOTIPO.escena.add(arbol1.malla);
