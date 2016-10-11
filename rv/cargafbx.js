@@ -4,7 +4,7 @@ loader.load( 'models/fbx/xsi_man_skinning.fbx', function( object ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
 						}
-	}
+	});
 			}
 
 
