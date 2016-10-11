@@ -1,5 +1,16 @@
+var manager = new THREE.LoadingManager();
+				manager.onProgress = function( item, loaded, total ) {
+					console.log( item, loaded, total );
+				};
+var onProgress = function( xhr ) {
+					if ( xhr.lengthComputable ) {
+						var percentComplete = xhr.loaded / xhr.total * 100;
+						console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
+					}
+				};
+
 var loader = new THREE.FBXLoader( manager );
-loader.load( 'models/fbx/xsi_man_skinning.fbx', function( object ) {
+loader.load( 'red.FBX', function( object ) {
 	object.traverse( function( child ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
