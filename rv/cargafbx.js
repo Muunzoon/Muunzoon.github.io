@@ -18,13 +18,12 @@ loader.load( 'red.FBX', function( object ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
 						}
-	}
+	});
+	escena.add( object );/////////////////////
 			});
 
 
 ///////////////////
-
-escena.add( object );/////////////////////
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 30;
