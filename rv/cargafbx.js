@@ -36,7 +36,7 @@ loader.load( 'prueba2.FBX', function( object ) {
 ///////////////////
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 300;
+camara.position.z = 3;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
