@@ -8,12 +8,10 @@ cubo.rotateX(-Math.PI/4);
 
 cubo.rotateY(Math.PI/4);
 
-escena.add( cubo );
-
 ///////////////////
 
 var escena = new THREE.Scene();
-escena.add( arbolMalla );
+escena.add( cubo );/////////////////////
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
