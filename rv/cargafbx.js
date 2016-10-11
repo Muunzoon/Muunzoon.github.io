@@ -1,3 +1,6 @@
+
+var escena = new THREE.Scene();
+///////////////
 var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
 					console.log( item, loaded, total );
@@ -15,13 +18,12 @@ loader.load( 'red.FBX', function( object ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
 						}
-	});
+	}
 			});
 
 
 ///////////////////
 
-var escena = new THREE.Scene();
 escena.add( object );/////////////////////
 
 var camara = new THREE.PerspectiveCamera();
