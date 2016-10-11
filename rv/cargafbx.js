@@ -11,6 +11,9 @@ var onProgress = function( xhr ) {
 					}
 				};
 
+var onError = function( xhr ) {
+				};
+
 var loader = new THREE.FBXLoader( manager );
 loader.load( 'prueba2.FBX', function( object ) {
 	object.traverse( function( child ) {
