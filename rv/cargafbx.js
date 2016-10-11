@@ -1,4 +1,3 @@
-
 var escena = new THREE.Scene();
 ///////////////
 var manager = new THREE.LoadingManager();
