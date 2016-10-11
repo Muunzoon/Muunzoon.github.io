@@ -17,6 +17,14 @@ loader.load( 'prueba2.FBX', function( object ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
 						}
+		if ( child instanceof THREE.SkinnedMesh ) {
+			if ( child.geometry.animations !== undefined || child.geometry.morphAnimations !== undefined ) {
+				child.mixer = new THREE.AnimationMixer( child );
+				mixers.push( child.mixer );
+				var action = child.mixer.clipAction( child.geometry.animations[ 0 ] );
+				action.play();
+			}
+
 	});
 	escena.add( object );/////////////////////
 			});
