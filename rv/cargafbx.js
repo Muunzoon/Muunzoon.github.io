@@ -1,17 +1,17 @@
-var forma = new THREE.BoxGeometry( 1,1,1);
+var loader = new THREE.FBXLoader( manager );
+loader.load( 'models/fbx/xsi_man_skinning.fbx', function( object ) {
+	object.traverse( function( child ) {
+		if ( child instanceof THREE.Mesh ) {
+							// pass
+						}
+	}
+			}
 
-var material = new THREE.MeshNormalMaterial();
-
-var cubo = new THREE.Mesh( forma, material );
-
-cubo.rotateX(-Math.PI/4);
-
-cubo.rotateY(Math.PI/4);
 
 ///////////////////
 
 var escena = new THREE.Scene();
-escena.add( cubo );/////////////////////
+escena.add( object );/////////////////////
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 30;
