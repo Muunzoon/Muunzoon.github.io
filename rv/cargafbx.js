@@ -1,4 +1,6 @@
 var escena = new THREE.Scene();
+var material = new THREE.MeshNormalMaterial();
+
 ///////////////
 var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
@@ -29,7 +31,8 @@ loader.load( 'prueba2.FBX', function( object ) {
 				}
 			}
 		} );
-		escena.add( object );
+		var asce = new THREE.Mesh(object, material);
+		escena.add( asce );
 	}, onProgress, onError );
 
 
