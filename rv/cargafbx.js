@@ -23,11 +23,11 @@ loader.load( 'prueba2.FBX', function( object ) {
 				mixers.push( child.mixer );
 				var action = child.mixer.clipAction( child.geometry.animations[ 0 ] );
 				action.play();
+				}
 			}
-
-	});
-	escena.add( object );/////////////////////
-			});
+		} );
+		escena.add( object );
+	}, onProgress, onError );
 
 
 ///////////////////
