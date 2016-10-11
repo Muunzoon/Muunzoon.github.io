@@ -13,7 +13,7 @@ var onProgress = function( xhr ) {
 				};
 
 var loader = new THREE.FBXLoader( manager );
-loader.load( 'red.FBX', function( object ) {
+loader.load( 'prueba2.FBX', function( object ) {
 	object.traverse( function( child ) {
 		if ( child instanceof THREE.Mesh ) {
 							// pass
