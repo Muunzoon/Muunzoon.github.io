@@ -34,8 +34,9 @@ document.body.appendChild( renderizador.domElement );
  function loop(){
    requestAnimationFrame( loop );
 
-  pieza.rotateY(0.1);
-  pieza.piernaIzq.rotateZ(0.1);
+  //pieza.rotateY(0.1);
+  pieza.piernaIzq.rotateZ(0.01);
+   pieza.piernaDer.rotateZ(0.01);
    renderizador.render( escena, camara );
  }
  
