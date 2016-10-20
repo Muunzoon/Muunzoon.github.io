@@ -16,8 +16,8 @@ function Pieza(){
   function setup(){
     pieza = new Pieza();
     ////////////////////////
-    var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
-    var pata = new THREE.Mesh( pieza, material1 );
+    var material = new THREE.MeshNormalMaterial();
+    var pata = new THREE.Mesh( pieza, material );
     //////////////////////////////
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 5;
