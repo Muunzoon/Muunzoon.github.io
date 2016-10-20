@@ -16,7 +16,6 @@ function Pieza(){
 var camara = new THREE.PerspectiveCamera();
 var escena = new THREE.Scene();
 var renderizador = new THREE.WebGLRenderer();
-  
   function setup(){
     pieza = new Pieza();
     ////////////////////////
