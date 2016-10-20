@@ -28,12 +28,13 @@ escena.add( pata );
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerWidth, window.innerHeight);
 document.body.appendChild( renderizador.domElement );
-renderizador.render( escena, camara );
+
     
   }
  function loop(){
-  pieza.rotateY=.1;}
+  pieza.rotateY=.1;
   pieza.piernaIzq.rotateZ(0.1);
+   renderizador.render( escena, camara );
  }
  
  setup();
