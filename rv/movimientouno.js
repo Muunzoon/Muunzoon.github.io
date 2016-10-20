@@ -16,14 +16,12 @@ function Pieza(){
   function setup(){
     pieza = new Pieza();
     ////////////////////////
-    var material = new THREE.MeshNormalMaterial();
-    var pata = new THREE.Mesh( pieza, material );
     //////////////////////////////
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 5;
 
 var escena = new THREE.Scene();
-escena.add( pata );
+escena.add( pieza );
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerWidth, window.innerHeight);
