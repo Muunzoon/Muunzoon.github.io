@@ -18,7 +18,7 @@ function Pieza(){
     ////////////////////////
     //////////////////////////////
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 5;
+camara.position.z = 50;
 
 var escena = new THREE.Scene();
 escena.add( pieza );
