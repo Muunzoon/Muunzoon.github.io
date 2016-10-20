@@ -32,7 +32,8 @@ renderizador.render( escena, camara );
     
   }
  function loop(){
-  pieza.rotateY=.1;
+  pieza.rotateY=.1;}
+  pieza.piernaIzq.rotateZ(0.1);
  }
  
  setup();
