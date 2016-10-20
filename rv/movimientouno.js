@@ -4,11 +4,11 @@ function Pieza(){
   var piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
   var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));
   this.add(piernaIzq,piernaDer,cuerpo);
-  this.piernaIzq.position.z=-2;
-  this.piernaIzq.position.y=-2.5;
-  this.piernaDer.position.z=2;
-  this.piernaDer.position.y=-2.5;
-  cuerpo.position.z=2.5;
+  this.piernaIzq.position.Z=-2;
+  this.piernaIzq.position.Y=-2.5;
+  this.piernaDer.position.Z=2;
+  this.piernaDer.position.Y=-2.5;
+  cuerpo.position.Z=2.5;
   }
   var pieza;
   Pieza.prototype = new THREE.Object3D();
