@@ -11,9 +11,10 @@ function Pieza(){
   cuerpo.position.z=2.5;
   }
   var pieza = new Pieza();
-  Pieza.prototipe = new THREE.Object3D;
+  Pieza.prototipe = new THREE.Object3D();
   
   function setup(){
+    pieza = new Pieza();
     ////////////////////////
     var material1 = new THREE.MeshBasicMaterial( { color: 0x84422e } );
     var pata = new THREE.Mesh( pieza, material1 );
