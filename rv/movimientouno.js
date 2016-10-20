@@ -13,27 +13,28 @@ function Pieza(){
   }
   var pieza;
   Pieza.prototype = new THREE.Object3D();
+var camara = new THREE.PerspectiveCamera();
+var escena = new THREE.Scene();
+var renderizador = new THREE.WebGLRenderer();
   
   function setup(){
     pieza = new Pieza();
     ////////////////////////
     //////////////////////////////
-var camara = new THREE.PerspectiveCamera();
+
 camara.position.z = 50;
 
-var escena = new THREE.Scene();
+
 escena.add( pieza );
 
-var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerWidth, window.innerHeight);
 document.body.appendChild( renderizador.domElement );
-renderizador.render( escena, camara );
     
   }
  function loop(){
   pieza.rotateY(0.1);
   pieza.piernaIzq.rotateZ(0.1);
-   
+   renderizador.render( escena, camara );
  }
  
  setup();
