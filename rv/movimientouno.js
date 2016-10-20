@@ -8,6 +8,7 @@ function Pieza(){
   this.piernaIzq.position.y=-7.5;
   this.piernaDer.position.z=2;
   this.piernaDer.position.z=-7.5;
+  this.piernaDer.position.x=-7.5;
   cuerpo.position.z=2.5;
   }
   var pieza;
