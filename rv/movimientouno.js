@@ -9,8 +9,8 @@ function Pieza(){
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-5;
   this.piernaDer.position.x=2;
-  this.piernaIzq.rotateX(1);
-   this.piernaDer.rotateX(2);
+  this.piernaIzq.rotateX(2);
+   this.piernaDer.rotateX(1);
   //cuerpo.position.z=2.5;
   }
   var pieza;
