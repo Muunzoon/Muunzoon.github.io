@@ -4,11 +4,11 @@ function Pieza(){
   this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
   var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,10,5));
   this.add(this.piernaIzq,this.piernaDer,cuerpo);
-  this.piernaIzq.position.x=-2;
+  //this.piernaIzq.position.x=-2;
   this.piernaIzq.position.y=-7.5;
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-7.5;
-  this.piernaDer.position.x=2;
+  //this.piernaDer.position.x=2;
   cuerpo.position.z=2.5;
   }
   var pieza;
@@ -35,7 +35,7 @@ document.body.appendChild( renderizador.domElement );
  function loop(){
    requestAnimationFrame( loop );
   pieza.rotateY(0.1);
-   if (mov>=1.5){
+   if (mov>=3.14){
      cont=-cont;
      mov=0;}
    else{
