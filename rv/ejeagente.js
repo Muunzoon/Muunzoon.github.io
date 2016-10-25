@@ -81,8 +81,8 @@ function setup(){
   camara = new THREE.PerspectiveCamera();
   camara.position.z=30;
   
-  //entorno.add( new Pared(1,7,0));
-  //entorno.add( new Pared(1,-7,0));
+  entorno.add( new Pared(1,7,0));
+  entorno.add( new Pared(1,-7,0));
   entorno.add( new Pared(1,7,1));
   entorno.add( new Pared(1,-7,1));
   entorno.add( new Pared(1,7,-1));
