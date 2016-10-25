@@ -9,7 +9,7 @@ function Pieza(){
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-5;
   this.piernaDer.position.x=2;
-  this.piernaIzq.rotateX(2);
+  this.piernaIzq.rotateX(1.5);
    this.piernaDer.rotateX(2);
   //cuerpo.position.z=2.5;
   }
@@ -37,7 +37,7 @@ document.body.appendChild( renderizador.domElement );
  function loop(){
    requestAnimationFrame( loop );
   pieza.rotateY(0.01);
-   if (mov>=1.5){
+   if (mov>=2.7){
      cont=-cont;
      mov=0;}
    else{
