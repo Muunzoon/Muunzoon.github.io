@@ -75,6 +75,7 @@ function Pared(size, x=0,y=0){
 
 Pared.prototype = new THREE.Object3D();
 
+var renderer;
 function setup(){
   entorno = new Enviroment();
   camara = new THREE.PerspectiveCamera();
@@ -89,7 +90,7 @@ function setup(){
   entorno.add( new Pelota(.5));
   entorno.add( camara);
   
-  var renderer = new THREE.WebGLRenderer();
+  renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth, window.innerHeight);
   document.body.appendChild( renderer.domElement );
 }
