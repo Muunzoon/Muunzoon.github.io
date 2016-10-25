@@ -9,6 +9,7 @@ function Pieza(){
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-7.5;
   this.piernaDer.position.x=2;
+  this.piernaDer.rotateX(1.5);
   cuerpo.position.z=2.5;
   }
   var pieza;
@@ -16,7 +17,7 @@ function Pieza(){
 var camara = new THREE.PerspectiveCamera();
 var escena = new THREE.Scene();
 var renderizador = new THREE.WebGLRenderer();
-var cont=0;
+var cont=0.01;
   function setup(){
     pieza = new Pieza();
     ////////////////////////
@@ -37,7 +38,6 @@ document.body.appendChild( renderizador.domElement );
   //pieza.rotateY(0.1);
   pieza.piernaIzq.rotateX(cont);
    pieza.piernaDer.rotateX(cont);
-   cont+=.01;
    renderizador.render( escena, camara );
  }
  
