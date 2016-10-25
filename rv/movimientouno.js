@@ -2,7 +2,7 @@ function Pieza(){
   THREE.Object3D.call(this);
   this.piernaIzq = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
   this.piernaDer = new THREE.Mesh(new THREE.BoxGeometry(1,5,1));
-  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(6,11,6));
+  var cuerpo = new THREE.Mesh(new THREE.BoxGeometry(6,10,6));
   this.add(this.piernaIzq,this.piernaDer,cuerpo);
   this.piernaIzq.position.x=-2;
   this.piernaIzq.position.y=-5;
@@ -37,7 +37,7 @@ document.body.appendChild( renderizador.domElement );
  function loop(){
    requestAnimationFrame( loop );
   pieza.rotateY(0.1);
-   if (mov>=3.14){
+   if (mov>=2.7){
      cont=-cont;
      mov=0;}
    else{
