@@ -16,6 +16,7 @@ function Pieza(){
 var camara = new THREE.PerspectiveCamera();
 var escena = new THREE.Scene();
 var renderizador = new THREE.WebGLRenderer();
+var cont=0;
   function setup(){
     pieza = new Pieza();
     ////////////////////////
@@ -34,8 +35,9 @@ document.body.appendChild( renderizador.domElement );
    requestAnimationFrame( loop );
 
   //pieza.rotateY(0.1);
-  pieza.piernaIzq.rotateX(0.01);
-   pieza.piernaDer.rotateX(0.01);
+  pieza.piernaIzq.rotateX(cont);
+   pieza.piernaDer.rotateX(cont+1.5);
+   cont=cont+.01;
    renderizador.render( escena, camara );
  }
  
