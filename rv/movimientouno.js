@@ -37,7 +37,7 @@ document.body.appendChild( renderizador.domElement );
   //pieza.rotateY(0.1);
   pieza.piernaIzq.rotateX(cont);
    pieza.piernaDer.rotateX(cont);
-   cont=cont+.01;
+   cont+=.01;
    renderizador.render( escena, camara );
  }
  
