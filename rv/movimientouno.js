@@ -9,8 +9,8 @@ function Pieza(){
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-5;
   this.piernaDer.position.x=2;
-  this.piernaIzq.rotateX(1.5);
-   this.piernaDer.rotateX(1.5);
+  this.piernaIzq.rotateX(2);
+   this.piernaDer.rotateX(2);
   //cuerpo.position.z=2.5;
   }
   var pieza;
@@ -36,7 +36,7 @@ document.body.appendChild( renderizador.domElement );
   }
  function loop(){
    requestAnimationFrame( loop );
-  pieza.rotateY(0.1);
+  pieza.rotateY(0.01);
    if (mov>=2.3){
      cont=-cont;
      mov=0;}
