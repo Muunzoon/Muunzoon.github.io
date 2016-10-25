@@ -34,7 +34,7 @@ document.body.appendChild( renderizador.domElement );
   }
  function loop(){
    requestAnimationFrame( loop );
-  //pieza.rotateY(0.1);
+  pieza.rotateY(0.1);
    if (mov>=1.5){
      cont=-cont;
      mov=0;}
