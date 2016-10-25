@@ -9,7 +9,6 @@ function Pieza(){
   //this.piernaDer.position.z=2;
   this.piernaDer.position.y=-7.5;
   this.piernaDer.position.x=2;
-  this.piernaDer.rotateX(1.5);
   cuerpo.position.z=2.5;
   }
   var pieza;
@@ -37,7 +36,7 @@ document.body.appendChild( renderizador.domElement );
 
   //pieza.rotateY(0.1);
   pieza.piernaIzq.rotateX(cont);
-   pieza.piernaDer.rotateX(cont);
+   pieza.piernaDer.rotateX(-cont);
    renderizador.render( escena, camara );
  }
  
