@@ -46,24 +46,6 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
-Enviroment.prototype.setMap=function(map){
-  var _offset = Math.floor(map.length/2);
-  
-  for (var i =0; i<map.length;i++)
-    for (var j =0; j<map.length;j++){
-      if (map[i][j]==="x")
-        this.add(new Wall(1,j-_offset,-(i-_offset)));
-      else if
-        this.add(new Robot(.5,j-_offset,-(i-_offset)));
-    }
-}
-
-function Sensor(position,direction){
-THREE.Raycaster.call(this,position,direction);
-  this.colision=false;
-}
-Sensor.prototype=new THREE.Raycaster();
-
 function Robot(size,x,y){
   Agent.call(this,x,y);
   
@@ -124,6 +106,24 @@ Robot.prototype.operations.rotateCCW=function(robot,angle){
     angle=Math.PI/2;
   robot.rotation.z += angle;
 };
+
+Enviroment.prototype.setMap=function(map){
+  var _offset = Math.floor(map.length/2);
+  
+  for (var i =0; i<map.length;i++)
+    for (var j =0; j<map.length;j++){
+      if (map[i][j]==="x")
+        this.add(new Wall(1,j-_offset,-(i-_offset)));
+      else if
+        this.add(new Robot(.5,j-_offset,-(i-_offset)));
+    }
+}
+
+function Sensor(position,direction){
+THREE.Raycaster.call(this,position,direction);
+  this.colision=false;
+}
+Sensor.prototype=new THREE.Raycaster();
 
 function setup(){
   var mapa = new Array();
