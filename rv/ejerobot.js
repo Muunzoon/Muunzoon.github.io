@@ -173,7 +173,7 @@ function loop(){
   enviroment.sense();
   enviroment.plan();
   enviroment.act();
-  renderer.render( enviroment, camara );
+  renderer.render( enviroment, camera );
 }
 
 var renderer,enviroment,camera;
