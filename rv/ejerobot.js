@@ -109,6 +109,7 @@ function loop(){
   renderer.render( enviroment, camara );
 }
 
+var renderer,enviroment,camera;
 setup();
 loop();
 
