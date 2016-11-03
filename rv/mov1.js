@@ -96,7 +96,7 @@ control.attach( arbolmalla );
 scene.add( control );
 
 window.addEventListener( 'resize', onWindowResize, false );
-window.addEventListener( 'keydown', function ( event ) {}
+window.addEventListener( 'keydown', function ( event ) {
 			switch ( event.keyCode ) {
 						case 81: // Q
 							control.setSpace( control.space === "local" ? "world" : "local" );
