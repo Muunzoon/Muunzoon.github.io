@@ -1,6 +1,3 @@
-var time = 0;
-var clock = new THREE.Clock();
-///
 
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
@@ -85,41 +82,7 @@ var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
 			window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
-
-////////////////////////////////
-window.addEventListener( 'keydown', function( event ) {
-				switch ( event.keyCode ) {
-					// Q
-					case 81:
-						armMovement = 1;
-					break;
-					// A
-					case 65:
-						armMovement = - 1;
-					break;
-				}
-			}, false );
-			window.addEventListener( 'keyup', function( event ) {
-				armMovement = 0;
-			}, false );
-
-////////////////////////////////
-
-
-
-
-
-function animate() {
-			requestAnimationFrame( animate );
-			render();
-			stats.update();
-		}
-function render() {
-			var deltaTime = clock.getDelta();
-			controls.update( deltaTime );
-			renderizador.render( escena, camara );
-			time += deltaTime;
-		}
+renderizador.render( escena, camara );
 /*
 ///////////////
 var control;
