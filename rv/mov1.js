@@ -76,10 +76,10 @@ arbolMalla = new THREE.Mesh(arbolForma, material);
 
 arbolMalla.rotateX( Math.PI/4 );
 
-var escena = new THREE.Scene();
+escena = new THREE.Scene();
 escena.add( arbolMalla );
 
-var camara = new THREE.PerspectiveCamera();
+camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
 
 renderizador = new THREE.WebGLRenderer();
@@ -105,7 +105,7 @@ requestAnimationFrame(loop);
 renderizador.render( escena, camara );
 }
 
-var arbolMalla, renderizador;
+var arbolMalla, renderizador, escena, camara;
 setup();
 loop();
 /*
