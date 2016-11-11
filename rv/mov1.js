@@ -93,7 +93,7 @@ document.body.appendChild( renderizador.domElement );
 	/////////////////////
 }
 
-
+function loop(){
 if (keyboard.pressed("P")) {
 arbolMalla.rotateX( Math.PI/4 );
 }
