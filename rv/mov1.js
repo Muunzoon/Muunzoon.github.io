@@ -82,7 +82,7 @@ escena.add( arbolMalla );
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 300;
 
-var renderizador = new THREE.WebGLRenderer();
+renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
 			window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
@@ -105,7 +105,7 @@ requestAnimationFrame(loop);
 renderizador.render( escena, camara );
 }
 
-var arbolMalla;
+var arbolMalla, renderizador;
 setup();
 loop();
 /*
