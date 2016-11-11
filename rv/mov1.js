@@ -1,3 +1,7 @@
+/////////////////////
+var keyboard = new THREEx.KeyboardState();
+function setup(){
+/////////////
 
 var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var basee = new THREE.CylinderGeometry(24,24,8);
@@ -68,7 +72,7 @@ arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
-var arbolMalla = new THREE.Mesh(arbolForma, material);
+arbolMalla = new THREE.Mesh(arbolForma, material);
 
 arbolMalla.rotateX( Math.PI/4 );
 
@@ -82,7 +86,28 @@ var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95,
 			window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
+	
+	
+	
+	
+	/////////////////////
+}
+
+
+if (keyboard.pressed("P")) {
+arbolMalla.rotateX( Math.PI/4 );
+}
+else
+{
+arbolMalla.rotateX( -(Math.PI/4) );
+}
+requestAnimationFrame(loop);
 renderizador.render( escena, camara );
+}
+
+var arbolMalla;
+setup();
+loop();
 /*
 ///////////////
 var control;
