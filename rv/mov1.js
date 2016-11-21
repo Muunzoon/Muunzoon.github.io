@@ -94,7 +94,7 @@ document.body.appendChild( renderizador.domElement );
 }
 
 function loop(){
-if (keyboard.pressed.keydown("D")) {///////////////keyboard.pressed("D")
+if (keyboard.pressed("D")) {///////////////keyboard.pressed("D")
 arbolMalla.rotateY( Math.PI/32 );
 }
 else
