@@ -95,13 +95,13 @@ document.body.appendChild( renderizador.domElement );
 
 function loop(){
 	if (keyboard.pressed("D")) {///////////////keyboard.pressed("D")
-	if (band==0) {
+	if (letrad==0) {
 arbolMalla.rotateY( Math.PI/32 );
-	band=1;
+	letrad=1;
 }
 }
 	else{
-		band=0;}
+		letrad=0;}
 /*else
 {
 arbolMalla.rotateY( -(Math.PI/32) );
@@ -110,6 +110,6 @@ requestAnimationFrame(loop);
 renderizador.render( escena, camara );
 }
 
-var arbolMalla, renderizador, escena, camara,band=0;
+var arbolMalla, renderizador, escena, camara,letrad=0;
 setup();
 loop();
