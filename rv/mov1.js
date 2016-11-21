@@ -94,17 +94,22 @@ document.body.appendChild( renderizador.domElement );
 }
 
 function loop(){
-if (keyboard.pressed("D")) {///////////////keyboard.pressed("D")
+	if (keyboard.pressed("D")) {///////////////keyboard.pressed("D")
+	if (band==0) {
 arbolMalla.rotateY( Math.PI/32 );
+	band=1;
 }
-else
+}
+	else{
+		band=0;}
+/*else
 {
 arbolMalla.rotateY( -(Math.PI/32) );
-}
+}*/
 requestAnimationFrame(loop);
 renderizador.render( escena, camara );
 }
 
-var arbolMalla, renderizador, escena, camara;
+var arbolMalla, renderizador, escena, camara,band=0;
 setup();
 loop();
