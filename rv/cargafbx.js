@@ -14,13 +14,13 @@ ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 	escena.add(light);
 //////////////
 var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.load("castilo.mtl", function(materials){
+	mtlLoader.load("model/castilo.mtl", function(materials){
 		
 		materials.preload();
 		var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
 		
-		objLoader.load("castilo.obj", function(mesh){
+		objLoader.load("model/castilo.obj", function(mesh){
 		
 			mesh.traverse(function(node){
 				if( node instanceof THREE.Mesh ){
