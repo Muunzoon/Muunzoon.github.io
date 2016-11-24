@@ -1,7 +1,29 @@
 var escena = new THREE.Scene();
 
-////////////////*
-var mtload = new THREE.MTLLoader();
+////////////////
+var mtlLoader = new THREE.MTLLoader();
+	mtlLoader.load("castilo.mtl", function(materials){
+		
+		materials.preload();
+		var objLoader = new THREE.OBJLoader();
+		objLoader.setMaterials(materials);
+		
+		objLoader.load("castilo.obj", function(mesh){
+		
+			mesh.traverse(function(node){
+				if( node instanceof THREE.Mesh ){
+					node.castShadow = true;
+					node.receiveShadow = true;
+				}
+			});
+		
+			escena.add(mesh);
+			mesh.position.set(-5, 0, 4);
+			mesh.rotation.y = -Math.PI/4;
+		});
+		
+	});
+/*var mtload = new THREE.MTLLoader();
 mtload.load('castilo.mtl',function (materials){
 	materials.preload();
 var loader = new THREE.OBJLoader();
@@ -12,7 +34,7 @@ loader.load('castilo.obj',
 	function ( object ) {
 		escena.add( object );
 	}
-);});
+);});*/
 /*var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
 					console.log( item, loaded, total );
