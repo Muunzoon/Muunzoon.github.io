@@ -1,7 +1,7 @@
 var escena = new THREE.Scene();
 
-///////////////
-var manager = new THREE.LoadingManager();
+////////////////*
+/*var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
 					console.log( item, loaded, total );
 				};
@@ -32,6 +32,7 @@ loader.load( 'prueba2.FBX', function( object ) {
 		} );
 		escena.add( object );
 	}, onProgress, onError );
+*/
 
 
 ///////////////////
