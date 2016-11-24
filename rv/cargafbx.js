@@ -13,6 +13,7 @@ ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 	light.shadow.camera.far = 25;
 	escena.add(light);
 //////////////
+var mesh;
 var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load("model/castilo.mtl", function(materials){
 		
