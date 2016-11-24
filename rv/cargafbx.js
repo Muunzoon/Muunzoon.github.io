@@ -1,6 +1,16 @@
 var escena = new THREE.Scene();
 
 ////////////////*
+var loader = new THREE.OBJLoader();
+
+loader.load(
+	// resource URL
+	'castilo.obj',
+	// Function when resource is loaded
+	function ( object ) {
+		escena.add( object );
+	}
+);
 /*var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
 					console.log( item, loaded, total );
