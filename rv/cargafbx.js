@@ -2,7 +2,7 @@ var escena = new THREE.Scene();
 
 ////////////////*
 var mtload = new THREE.MTLLoader();
-mtload.load('castilo.mtl'),function (materials){
+mtload.load('castilo.mtl',function (materials){
 	materials.preload();
 var loader = new THREE.OBJLoader();
 	loader.setMaterials(materials);
