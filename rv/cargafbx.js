@@ -14,6 +14,7 @@ ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 	escena.add(light);
 //////////////
 var mesh;
+var crate, crateTexture, crateNormalMap, crateBumpMap;
 var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load("model/castilo.mtl", function(materials){
 		
