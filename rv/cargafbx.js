@@ -2,10 +2,8 @@ var escena = new THREE.Scene();
 
 ////////////////*
 var loader = new THREE.OBJLoader();
-
-loader.load(
+loader.load('castilo.obj',
 	// resource URL
-	'castilo.obj',
 	// Function when resource is loaded
 	function ( object ) {
 		escena.add( object );
