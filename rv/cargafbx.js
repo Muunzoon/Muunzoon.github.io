@@ -1,14 +1,18 @@
 var escena = new THREE.Scene();
 
 ////////////////*
+var mtload = new THREE.MTLLoader();
+mtload.load('castilo.mtl'),function (materials){
+	materials.preload();
 var loader = new THREE.OBJLoader();
+	loader.setMaterials(materials);
 loader.load('castilo.obj',
 	// resource URL
 	// Function when resource is loaded
 	function ( object ) {
 		escena.add( object );
 	}
-);
+);});
 /*var manager = new THREE.LoadingManager();
 				manager.onProgress = function( item, loaded, total ) {
 					console.log( item, loaded, total );
