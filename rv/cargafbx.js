@@ -1,7 +1,17 @@
 var escena = new THREE.Scene();
 
 ////////////////
-var ambientLight, light;
+var loader = new THREE.OBJLoader();
+// load a resource
+loader.load(
+	// resource URL
+	'model/castilo.obj',
+	// Function when resource is loaded
+	function ( object ) {
+		escena.add( object );
+	}
+);
+/*var ambientLight, light;
 
 ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 	escena.add(ambientLight);
@@ -12,8 +22,8 @@ ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
 	light.shadow.camera.near = 0.1;
 	light.shadow.camera.far = 25;
 	escena.add(light);
-//////////////
-var mesh;
+*///////////////
+/*var mesh;
 var crate, crateTexture, crateNormalMap, crateBumpMap;
 var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.load("model/castilo.mtl", function(materials){
@@ -37,6 +47,7 @@ var mtlLoader = new THREE.MTLLoader();
 		});
 		
 	});
+*/
 /*var mtload = new THREE.MTLLoader();
 mtload.load('castilo.mtl',function (materials){
 	materials.preload();
