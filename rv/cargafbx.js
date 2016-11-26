@@ -5,7 +5,7 @@ var loader = new THREE.OBJLoader();
 // load a resource
 loader.load(
 	// resource URL
-	'model/castilo.obj',
+	'model/taza.obj',
 	// Function when resource is loaded
 	function ( object ) {
 		escena.add( object );
