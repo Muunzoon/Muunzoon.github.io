@@ -17,6 +17,7 @@ figura.lineTo(7, 7);
 figura.lineTo(5, 6);
 figura.lineTo(4, 6);
 figura.lineTo(5, 4);
+figura.lineTo(6, 2);
 figura.lineTo(6, 0);
 figura.lineTo(0, 0);
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
