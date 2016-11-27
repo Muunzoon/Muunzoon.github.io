@@ -1,3 +1,11 @@
+var baseabajo = new THREE.CylinderGeometry(32,32,8);
+baseabajo.translate(0,-24,0);
+var basee = new THREE.CylinderGeometry(24,24,8);
+basee.translate(0,-20,0);
+var baseeMalla = new THREE.Mesh(basee);
+var baseAbajomalla = new THREE.Mesh(baseabajo);
+
+
 var figura = new THREE.Shape();
 //float Arx[]={,13,13,14,14};
 //float Ary[]={,188,188,186,186,184,184};
@@ -21,6 +29,9 @@ figura.lineTo(6, 2);
 figura.lineTo(6, 0);
 figura.lineTo(0, 0);
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
+
+forma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
+forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
