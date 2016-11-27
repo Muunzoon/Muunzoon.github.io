@@ -30,7 +30,7 @@ figura.lineTo(6, 0);
 figura.lineTo(0, 0);
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
 forma.translate(-2,0,0);
-forma.scale(1,1,1);
+forma.scale(2,2,2);
 
 forma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
