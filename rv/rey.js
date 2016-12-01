@@ -24,7 +24,7 @@ figura.lineTo(0, -1);
 figura.lineTo(-1, -1);
 figura.lineTo(-1, 0);
 figura.lineTo(0, 0);
-var forma = new THREE.ExtrudeGeometry( figura, {amount: 10} );
+var forma = new THREE.ExtrudeGeometry( figura, {amount: 1} );
 forma.translate(-3,-5,-5);
 //forma.scale(2,2,2);
 
