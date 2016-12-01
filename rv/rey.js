@@ -26,14 +26,14 @@ figura.lineTo(-10, 0);
 figura.lineTo(0, 0);
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 1} );
 forma.translate(-3,-5,-5);
-//forma.scale(2,2,2);
+forma.scale(.2,.2,.2);
 
 forma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
-malla.rotateY( (Math.PI/4)*-1 );
+//malla.rotateY( (Math.PI/4)*-1 );
 
 var escena = new THREE.Scene();
 escena.add( malla );
