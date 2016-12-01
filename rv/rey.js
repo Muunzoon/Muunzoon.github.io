@@ -12,17 +12,17 @@ var figura = new THREE.Shape();
 //8,7,7,7,9,12,14,14,16,17,15,13,12,13,14 
 //184,186,186,189,192,194,195,196,194,193,191,190,190,188,184        0=184         0=8
 figura.moveTo(0, 0);
-figura.lineTo(0, 1);
-figura.lineTo(1, 1);
-figura.lineTo(1, 0);
-figura.lineTo(2, 0);
-figura.lineTo(2, -1);
-figura.lineTo(1, -1);
-figura.lineTo(1, -2);
-figura.lineTo(0, -2);
-figura.lineTo(0, -1);
-figura.lineTo(-1, -1);
-figura.lineTo(-1, 0);
+figura.lineTo(0, 10);
+figura.lineTo(10, 10);
+figura.lineTo(10, 0);
+figura.lineTo(20, 0);
+figura.lineTo(20, -10);
+figura.lineTo(10, -10);
+figura.lineTo(10, -20);
+figura.lineTo(0, -20);
+figura.lineTo(0, -10);
+figura.lineTo(-10, -10);
+figura.lineTo(-10, 0);
 figura.lineTo(0, 0);
 var forma = new THREE.ExtrudeGeometry( figura, {amount: 1} );
 forma.translate(-3,-5,-5);
