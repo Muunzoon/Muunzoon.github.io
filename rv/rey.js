@@ -4,7 +4,7 @@ for ( var i = 0; i < 50; i ++ ) {
             Math.sin( i * 0.2 ) * 15 + 50, ( i - 5 ) * 2 ) );
 }
 var forma = new THREE.LatheGeometry(puntos);
-forma.scale(.5,.5,.5);
+forma.scale(.3,.3,.3);
 var mallag = new THREE.Mesh( forma );
 
 
