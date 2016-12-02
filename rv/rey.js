@@ -2,9 +2,10 @@ var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
 var basee = new THREE.CylinderGeometry(24,24,8);
 basee.translate(0,-20,0);
+var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
 var baseeMalla = new THREE.Mesh(basee);
 var baseAbajomalla = new THREE.Mesh(baseabajo);
-var troncoForma = new THREE.CylinderGeometry(10, 20, 40);
+var troncoMalla = new THREE.Mesh(troncoForma);
 
 var figura = new THREE.Shape();
 //float Arx[]={,13,13,14,14};
@@ -30,7 +31,7 @@ forma.translate(-2,20,-5);
 
 forma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
-forma.merge(troncoForma.geometry, troncoForma.matrix);
+forma.merge(troncoMalla.geometry, troncoMalla.matrix);
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 //malla.rotateY( (Math.PI/4)*-1 );
