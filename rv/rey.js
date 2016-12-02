@@ -1,3 +1,12 @@
+var puntos = [];
+for ( var i = 0; i < 50; i ++ ) {
+  puntos.push( new THREE.Vector2( 
+            Math.sin( i * 0.2 ) * 15 + 50, ( i - 5 ) * 2 ) );
+}
+var forma = new THREE.LatheGeometry(puntos);
+var mallag = new THREE.Mesh( forma );
+
+
 var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
 var basee = new THREE.CylinderGeometry(24,24,8);
@@ -29,6 +38,7 @@ var forma = new THREE.ExtrudeGeometry( figura, {amount: 1} );
 forma.scale(.2,.2,.2);
 forma.translate(0,30,-5);
 
+forma.merge(mallag.geometry, mallag.matrix);
 forma.merge(baseAbajomalla.geometry, baseAbajomalla.matrix);
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 forma.merge(troncoMalla.geometry, troncoMalla.matrix);
