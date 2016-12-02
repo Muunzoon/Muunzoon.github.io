@@ -5,7 +5,7 @@ for ( var i = 0; i < 50; i ++ ) {
 }
 var forma = new THREE.LatheGeometry(puntos);
 var mallag = new THREE.Mesh( forma );
-
+mallag.scale(.5,.5,.5);
 
 var baseabajo = new THREE.CylinderGeometry(32,32,8);
 baseabajo.translate(0,-24,0);
