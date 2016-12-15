@@ -2,7 +2,7 @@ var basee = new THREE.CylinderGeometry(2,2,8);
 basee.translate(0,-10,0);
 var baseeMalla = new THREE.Mesh(basee);
 
-var forma = new THREE.ConeGeometry( 3, 10, 32 );
+var forma = new THREE.ConeGeometry( 5, 10, 16 );
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 forma.translate(-3,-5,-5);
 forma.scale(2,2,2);
