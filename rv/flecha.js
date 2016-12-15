@@ -6,6 +6,7 @@ var forma = new THREE.ConeGeometry( 5, 10, 16 );
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 forma.translate(-3,-5,-5);
 forma.scale(2,2,2);
+malla.rotateZ( (Math.PI/4) );
 
 
 var material = new THREE.MeshNormalMaterial();
