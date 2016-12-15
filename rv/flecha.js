@@ -1,13 +1,11 @@
-var basee = new THREE.CylinderGeometry(24,24,8);
-basee.translate(0,-20,0);
+var basee = new THREE.CylinderGeometry(10,10,8);
+basee.translate(0,-10,0);
 var baseeMalla = new THREE.Mesh(basee);
 
 var forma = new THREE.ConeGeometry( 5, 20, 32 );
 forma.merge(baseeMalla.geometry, baseeMalla.matrix);
 forma.translate(-3,-5,-5);
 forma.scale(2,2,2);
-
-
 
 
 var material = new THREE.MeshNormalMaterial();
