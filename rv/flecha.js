@@ -1,4 +1,4 @@
-var basee = new THREE.CylinderGeometry(10,10,8);
+var basee = new THREE.CylinderGeometry(2,10,8);
 basee.translate(0,-10,0);
 var baseeMalla = new THREE.Mesh(basee);
 
